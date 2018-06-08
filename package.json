@@ -4,7 +4,8 @@
   "description": "Playground project for web acceptance tests with webdriver.io and cucumber",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "debug": "DEBUG=true ./node_modules/.bin/wdio wdio.conf.js"
   },
   "author": "",
   "license": "MIT",
