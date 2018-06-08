@@ -34,7 +34,7 @@ exports.config = {
   // and 30 processes will get spawned. The property handles how many capabilities
   // from the same test should run tests.
   //
-  execArgv: debug ? ['--inspect'] : [],
+  //execArgv: debug ? ['--inspect'] : [],
 
   services: debug ? ['selenium-standalone'] : [],
 

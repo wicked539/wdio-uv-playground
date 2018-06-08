@@ -19,7 +19,7 @@ cucumber.defineSupportCode(function(paramObj) {
       browser.setValue('input#username', user);
       browser.setValue('input#password', password);
 
-      browser.click('span#submitButton');
+      browser.click('button.btn-primary');
     }
   );
 

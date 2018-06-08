@@ -1,2 +1,5 @@
 node_modules/
 .idea/
+errorShots/
+testResults/
+npm-debug.log
