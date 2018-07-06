@@ -53,19 +53,21 @@ cucumber.defineSupportCode(function (paramObj) {
   When(
     /^We click on day ([^"]*)? of the month$/,
     (n) => {
-      let selector = 'span.datepicker-day=\'' + n + '\'';
+      const days = browser.elements('span.datepicker-day');
 
-      console.log('selector: ' + selector)
-
-      browser.waitForVisible(selector);
-      browser.click(selector);
+      for (let i = 0; i < days.value.length; i++) {
+        if (days.value[i].getText() === n) {
+          days.value[i].click();
+          break;
+        }
+      }
     }
   );
 
   Then(
     /^We expect to see the create vacation request form$/,
     () => {
-      expect(browser.getElement('legend=Urlaubsantrag')).toExist();
+      expect(browser.isExisting('legend=Urlaubsantrag')).to.be.true;
     }
   );
 });

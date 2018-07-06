@@ -12,3 +12,4 @@ Feature: Make sure Urlaubsverwaltung base functionality works as expected
         And We scroll to next month 12 times
         And We click on day 05 of the month
         Then We expect to see the create vacation request form
+        And We log out
